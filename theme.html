@@ -1,0 +1,1524 @@
+   <!-- CHARACTER RANKING THEME-->
+
+<script id="player-ranking" type="text/x-handlebars-template">
+   <!--{{#each this}}-->
+      <li>
+         <div class='heroRankWrapper'>
+            <div class='lfloat'>
+               <div class='icon {{ChaClass}}' title='{{ChaClass}}'></div>
+            </div>
+            <div class='heroInfo rfloat'>
+               <p><span class='infoHeader'><img src='./images/{{pstatus ChaOnline}}' width='16' height='16'> {{ChaName}}</span></p>
+               <p> Guild: <span class='infoDetail'>{{GuName}}</span></p>
+               <p> School: <span class='infoDetail'>{{ChaSchool}}</span></p>
+               <p> Kills:{{ChaPkWin}}<span class='infoDetail'></span>  &nbsp;&nbsp;&nbsp; Death :{{ChaPkLoss}}<span class='infoDetail'></span></p>
+            </div>
+         </div>
+      </li>
+   <!--{{/each}}-->
+</script>
+   <!-- GUILD HOLDER THEME-->
+<script id="guild-holder" type="text/x-handlebars-template">
+   <li>
+      <div class='heroRankWrapper'>
+         <div class='lfloat'>
+            <div class='icon SG'></div>
+         </div>
+         <div class='heroInfo rfloat'>
+            <p><span class='infoHeader'>{{SG}}</span></p>
+            <p> Leader: <span class='infoDetail'>{{SGL}}</span></p>
+         </div>
+      </div>
+   </li>
+   <li>
+      <div class='heroRankWrapper'>
+         <div class='lfloat'>
+            <div class='icon MP'></div>
+         </div>
+         <div class='heroInfo rfloat'>
+            <p><span class='infoHeader'>{{MP}}</span></p>
+            <p> Leader: <span class='infoDetail'>{{MPL}}</span></p>
+         </div>
+      </div>
+   </li>
+   <li>
+      <div class='heroRankWrapper'>
+         <div class='lfloat'>
+            <div class='icon PHNX'></div>
+         </div>
+         <div class='heroInfo rfloat'>
+            <p><span class='infoHeader'>{{PHNX}}</span></p>
+            <p> Leader: <span class='infoDetail'>{{PHNXL}}</span></p>
+         </div>
+      </div>
+   </li>
+   <li>
+      <div class='heroRankWrapper'>
+         <div class='lfloat'>
+            <div class='icon TH'></div>
+         </div>
+         <div class='heroInfo rfloat'>
+            <p><span class='infoHeader'>{{TH}}</span></p>
+            <p> Leader: <span class='infoDetail'>{{THL}}</span></p>
+         </div>
+      </div>
+   </li>
+</script>
+
+<script id="register-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> Registration Section </p>
+   </div>
+   <div class='boxContent'>
+      <h1>Sign Up</h1>
+      <p>It’s free and always will be.</p>
+      <div class='registrationWrapper'>
+         <form id='RegisterForm' method='post'>
+            <p>Username :</p>
+            <input type='text' id='usernameR' placeholder='Username' required/>
+            <br><br>
+            <p>Email Address :</p>
+            <input type='email' id='emailR' placeholder='Valid email' required/>
+            <br><br>
+            <p>Password</p>
+            <input type='password' id='passwordR' placeholder='Password' required/>
+            <br><br>
+            <p>Verify Password</p>
+            <input type='password' id='password2R' placeholder='Verify password' required/>
+            <br><br>
+            <p>Enter Pin Code</p>
+            <input type='password' id='pincodeR' placeholder='Pincode' required/>
+            <br><br>
+            <h5>By clicking sign up, you agree to our <a href='#cmd/footer/termsofservice'>Terms and condition</a>.</h5>
+            <br><br>
+            <button> Sign Up</button>
+         </form>
+      </div>
+   </div>
+</div>
+</script>
+
+<script id="login-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> Players <span style='color:#ec7438'>Login</span> </p>
+   </div>
+   <div class='boxContent'>
+      <div class='loginBox'>
+      
+      
+         <form id='userLogin' method='post'>
+            <p>Username</p>
+            <input type='text' name='username' id='username' placeholder='Your Username' required/>
+            <p>Password</p>
+            <input type='password' name='password' id='password' placeholder='Your Password' required/>
+            <br>
+            <button class='loginButton'>Sign In</button>
+         </form>
+
+         
+         <br><br>
+         <a href="#cmd/user/recover"><p class="recoverPass">Recover My Password ?</p></a>
+      </div>
+   </div>
+</div>
+</script>
+
+<script id="notify-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p>  Alert...</p>
+   </div>
+   <div class='boxContent'>
+      <p class="loadingmsgs">
+         Your account is idle for a while! Please re-login your account to continue
+      </p>
+   </div>
+</div>
+</script>
+
+<script id="error-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p>Page not found!</p>
+   </div>
+   <div class='boxContent' style='background:#efefef;overflow:hidden'>
+      <img src='./images/404.jpg' width='570' height='365'/>
+   </div>
+</div>
+</script>
+
+<script id="news-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p>Announcement</p>
+   </div>
+   <div class='tab_control'>
+      <a href='#cmd/news/tab/0'>
+         <div class='tabMenu lfloat active'>ALL</div>
+      </a>
+      <a href='#cmd/news/tab/2'>
+         <div class='tabMenu lfloat'>NEWS</div>
+      </a>
+      <a href='#cmd/news/tab/1'>
+         <div class='tabMenu lfloat'>EVENT</div>
+      </a>
+      <a href='#cmd/news/tab/3'>
+         <div class='tabMenu lfloat'>SYSTEM</div>
+      </a>
+   </div>
+   <div class='clearfix'></div>
+   <div id='newsFeedHolder'class='boxContent'>
+      {{#if this}}
+      {{#each this}}
+      <div class="newSubject">
+         <div class="newwrapper {{newsType type}} span60  lfloat">{{newsType type}}</div>
+         <div class="newwrapper span100 lfloat">{{date}}</div>
+         <div class="newwrapper nsubject lfloat">
+            <a href="#cmd/news/view/{{id}}" title="news">{{subject}}</a>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+      {{/each}}
+      {{else}}
+         <p> No available news... </p>
+      </div>
+      {{/if}}
+   </div>
+</div>
+</script>
+
+<script id="viewnews-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p>Subject: <span style='color:#ec7438'>{{subject}}</span> </p>
+   </div>
+   <div class='boxContent'>{{{body}}}
+   <div> <div class="fb-comments" data-href="https://www.facebook.com/pages/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D8%AA%D9%85%D9%8A%D8%B2-excellence-group/318068618234751?fref=ts" data-numposts="5"></div>
+   </div>
+
+</div>
+</script>
+
+<script id="fullclientdownload-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Full Client Download Section </p>
+   </div>
+   <div class="boxContent">
+      <ul class="newsList">
+         {{#each this}}
+         <li>
+            <div class="dlWrapper">
+               <div class="iconWrapper lfloat">
+                  <img src="./images/dl-icon.png">
+               </div>
+               <div class="dlInformation lfloat">
+                  <h3>{{linkName}}</h3>
+                  <p>
+                     <i> uploaded: {{dateUpload}}</i>
+                  </p>
+                  <a target="_blank" href="{{linkAddress}}">
+                     <p class="downloadLinkbtn">Click here to download</p>
+                  </a>
+               </div>
+            </div>
+         </li>
+         {{/each}}
+      </ul>
+      <div class="dlNotice">
+         <img src="./images/req.jpg" alt="reg">
+      </div>
+   </div>
+</div>
+</script>
+
+<script id="patchdownload-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Client Patch Download Section </p>
+   </div>
+   <div class="boxContent">
+      <ul class="newsList">
+         {{#each this}}
+         <li>
+            <div class="dlWrapper">
+               <div class="iconWrapper lfloat">
+                  <img src="./images/dl-icon.png">
+               </div>
+               <div class="dlInformation lfloat">
+                  <h3>{{linkName}}</h3>
+                  <p>
+                     <i> uploaded: {{dateUpload}}</i>
+                  </p>
+                  <a target="_blank" href="{{linkAddress}}">
+                     <p class="downloadLinkbtn">Click here to download</p>
+                  </a>
+               </div>
+            </div>
+         </li>
+         {{/each}}
+      </ul>
+      <div class="dlNotice">
+         <img src="./images/req.jpg" alt="reg">
+      </div>
+   </div>
+</div>
+</script>
+<script id="totalrank-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> Players Ranking </p>
+   </div>
+   <div class='boxContent'>
+      <div class='mRankingWrapper'>
+         <table>
+            <th>Rank</th>
+            <th>Hero</th>
+            <th>School</th>
+            <th>Class</th>
+            <th>Level</th>
+            <th>Kill</th>
+            <th>Death</th>
+            {{#each this}}
+            <tr>
+               <td>{{addOne @key}}</td>
+               <td><img src='./images/{{pstatus ChaOnline}}' width='10' height='10'> {{ChaName}}</td>
+               <td>{{ChaSchool}}</td>
+               <td>{{ChaClass}}</td>
+               <td>{{ChaLevel}}</td>
+               <td>{{ChaPkWin}}</td>
+               <td>{{ChaPkLoss}}</td>
+            </tr>
+            {{/each}}
+         </table>
+      </div>
+   </div>
+</div>
+</script>
+<script id="recovery-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> Password Recovery Section </p>
+   </div>
+   <div class='boxContent'>
+      <form id='recoverForm' method='post'>
+         Enter Account Username : <input type='text' id='rec_userName' required/> 
+         <button>Recover</button>
+      </form>
+      <br><br>
+      <h5>Having trouble accessing your account? Please contact Online Customer Support.</h5>
+   </div>
+</div>
+</script>
+
+<script id="update-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> Additional Information Required </p>
+   </div>
+   <div class='boxContent'>
+      <div class='registrationWrapper'>
+         <form id='updateForm' method='post'>
+            <p>Complete Name</p>
+            <input type='text' id='rfullName' placeholder='Complete Name' required/>
+            <br><br>
+            <p>Security Question</p>
+            <select id='secQA'>
+               {{#each secQ}}
+               <option value="{{@key}}">{{this}}</option>
+               {{/each}}
+            </select>
+            <br><br>
+            <p>Answer</p>
+            <input type='text' id='secAnswer' placeholder='Answer' required/>
+            <br><br>
+            <button> NEXT</button>
+         </form>
+      </div>
+   </div>
+</div>
+</script>
+
+<script id="userinfo-wrapper" type="text/x-handlebars-template">
+<div class='accWrapper'>
+   <div class='titleHeader'>
+      <p> Account Information </p>
+   </div>
+   <div class='userInfoWrapper'>
+      
+      <p>Welcome :<span> <b> {{fullname}} </b></span></p>
+      <div class='divider'></div>
+      <p>C-Point : <span>{{vpoint}}</span></p>
+      <p>E-Point : <span>{{epoint}}</span></p>
+      <p>Notification : <span><a href='#cmd/notification/view/{{notification}}'>{{notification}}</a></span></p>
+      <p>Last Login : <span>{{lastlogin}}</span></p>
+      
+      <br>
+      <select id="activemenu">
+         <option value='404'>SELECT FUNCTIONS</option>
+         {{#each menu}}
+         <option value={{id}}>{{functionName}}</option>
+         {{/each}}
+         <option value='0'>Log me out</option>
+      </select>
+      
+   </div>
+</div>
+</script>
+<script id="admininfo-wrapper" type="text/x-handlebars-template">
+<div class='accWrapper'>
+   <div class='titleHeader'>
+      <p> Account Information </p>
+   </div>
+   <div class='userInfoWrapper'>
+      
+      <p>Hello!. <span><b>[ADMIN] {{fullname}}</b></span></p>
+      <div class='divider'></div>
+      <p>C-Point : <span>{{vpoint}}</span></p>
+      <p>E-Point : <span>{{epoint}}</span></p>
+      <p>Notification : <span><a href='#cmd/notification/view/{{notification}}'>{{notification}}</a></span></p>
+      <p>Last Login : <span>{{lastlogin}}</span></p>
+      
+      <br>
+      <select id="activemenu">
+         <option value='404'>SELECT FUNCTIONS</option>
+         {{#each menu}}
+         <option value={{id}}>{{functionName}}</option>
+         {{/each}}
+         <option value='0'>Log me out</option>
+      </select>
+      
+   </div>
+</div>
+</script>
+
+<script id="administrative-wrapper" type="text/x-handlebars-template">
+   <div class='boxWrapper'>
+      <div class='titleHeader'>
+         <p> Admin Panel </p>
+      </div>
+      <div class='boxRcontent'>
+         <table border='1'>
+            <tbody>
+               <tr>
+                  <td colspan='3'><b>SERVER STATUS</b></td>
+               </tr>
+               <tr>
+                  <td>TOTAL ONLINE</td>
+                  <td>TOTAL ACCOUNT</td>
+                  <td>TOTAL PLAYERS</td>
+               </tr>
+               <tr>
+                  <td>{{total_online}}</td>
+                  <td>{{total_cha}}</td>
+                  <td>{{total_acc}}</td>
+               </tr>
+            </tbody>
+         </table>
+         <br><br>
+         <table>
+            <tbody>
+               <tr >
+                  <td><i><b>ACCOUNT MANAGER</b></i></td>
+                  <td><span data-Admcontrol='accManagerCtrl' class='toggleController addPointer shown rfloat' id='showHideControl'> SHOW CONTROL</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table id='accManagerCtrl' class='seekResult' style='display:none'>
+            <thead>
+               <td>Enter Exact Username</td>
+               <form>
+                  <td><input id='Skusername' required/></td>
+                  <td><button id='seekusername'>Search</button></td>
+               </form>
+            </thead>
+            <tbody id='userNameDisplay' style='display:none'></tbody>
+         </table>
+         <br><br>
+         <table>
+            <tbody>
+               <tr>
+                  <td><i><b>POINT GENERATOR</b></i></td>
+                  <td><span data-Admcontrol='pointGenCtrl' class='toggleController addPointer shown rfloat' id='showHideControl'> SHOW CONTROL</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table id='pointGenCtrl' style='display:none'>
+            <tbody>
+               <tr>
+                  <td>
+                     <select id='pointOption'>
+                        <option value='0'>SELECT TYPE </option> 
+                        <option value='2'>C Point </option>
+                        <option value='1'>E Point </option>
+                     </select>
+                  </td>
+                  <td>AMOUNT : <input id='evpoint' type='input' style='width:80px'/></td>
+                  <td><button id='generateBtn'>GENERATE</button> <button id='generateView'>VIEW</button></td>
+               </tr>
+            </tbody>
+         </table>
+         <br><br>
+         <table>
+            <tbody>
+               <tr>
+                  <td><i><b>LINK MANAGER</b></i></td>
+                  <td><span data-Admcontrol='linkAddressCtrl' class='toggleController addPointer shown rfloat' id='showHideControl'> SHOW CONTROL</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table id='linkAddressCtrl' style='display:none'>
+            <thead>
+               <tr>
+                  <td colspan='4'><button id='showCreateLinkForm'>CREATE</button> <button id='showLinkAvailable'>VIEW</button></td>
+               </tr>
+            </thead>
+            <tbody id='linkSubForm'><!--sub form display--></tbody>
+         </table>
+         <br><br>
+         <table>
+            <tbody>
+               <tr>
+                  <td><i><b>NEWS MANAGER</b></i></td>
+                  <td><span data-Admcontrol='newsCtrl' class='toggleController addPointer shown rfloat' id='showHideControl'> SHOW CONTROL</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table id='newsCtrl' style='display:none'>
+            <thead>
+               <tr>
+                  <td colspan='4'><button id='showCreateNewsForm'>CREATE</button> <button id='showNewsPublish'>VIEW</button></td>
+               </tr>
+            </thead>
+            <tbody id='linkSubForm2'>
+            </tbody>
+         </table>
+         <br><br>
+         <table>
+            <tbody>
+               <tr>
+                  <td><i><b>SHOP MANAGER</b></i></td>
+                  <td><span data-Admcontrol='shopCtrl' class='toggleController addPointer shown rfloat' id='showHideControl'> SHOW CONTROL</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table id='shopCtrl' style='display:none'>
+            <thead>
+               <tr>
+                  <td colspan='6'><button id='createITEM'>CREATE</button> <button id='viewITEM'>VIEW</button> <button id='addCtg'>ADD CTGRY</button></td>
+               </tr>
+            </thead>
+            <tbody id='linkSubForm3'></tbody>
+         </table>
+         <br><br>
+         <table>
+            <tbody>
+               <tr>
+                  <td><i><b>WEB CONFIGURATIONS</b></i></td>
+                  <td><span data-Admcontrol='webconfig' class='toggleController addPointer shown rfloat' id='showHideControl'> SHOW CONTROL</span></td>
+               </tr>
+            </tbody>
+         </table>
+         <table id='webconfig' style='display:none'>
+            <thead>
+               <tr>
+                  <td colspan="2">
+                  <select id='webconfigselected'>
+                     <option value='0'>SELECT FUNCTIONS </option>
+                     {{#each menu_all}}
+                     <option value="{{id}}">{{functionName}}</option>
+                     {{/each}}
+                  </select> <button id='webloadfunctionz'>CONFIGURE</button>
+                  </td>
+               </tr>
+            </thead>
+            <tbody id='linkSubForm4'></tbody>
+         </table>
+        
+      </div>
+   </div>
+</script>
+
+<script id="resetst-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> RESET STATS </p>
+   </div>
+   <div class='boxContent'>
+      <div class='resetBoxWrapper'>
+         <h2>Select Character to Reset Stats</h2>
+         <br>
+         <select id='chaID'>
+            {{#each chainfo}}
+            <option value="{{ChaNum}}">{{ChaName}}</option>
+            {{/each}}
+         </select>
+         <br><br>
+         <button id='resetAction'>Reset Stats</button>
+         <br><br>
+         <h3>Reset Requirement</h3>
+      </br>
+      {{#required}}
+         <div class="codeblockz"><pre><p>GOLD: {{format gold}} CP: {{vp}}  EP: {{ep}}</p></pre></div>
+      {{/required}}
+   </div>
+</div>
+</div>
+</script>
+
+<script id="changeschool-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Change School </p>
+   </div>
+   <div class="boxContent">
+      <div class="resetBoxWrapper">
+         <h2>Select Character to Transfer</h2>
+         <br>
+          <select id='chaID'>
+            {{#each chainfo}}
+            <option value="{{ChaNum}}">{{ChaName}}</option>
+            {{/each}}
+            
+         </select>
+         <br><br>
+         <select id="schoolActive">
+            <option value="0">SG Campus</option>
+            <option value="1">MP Campus</option>
+            <option value="2">PHNX Campus</option>
+         </select>
+         <br><br><br>
+         <button id="changeAction">Change</button>
+         <br><br>
+         {{#required}}
+         <div class="codeblockz"><pre><p>GOLD: {{format gold}} CP: {{vp}}  EP: {{ep}}</p></pre></div>
+         {{/required}}
+      </div>
+   </div>
+</div>
+</script>
+<script id="reborn-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Character Reborn </p>
+      </div>
+         <div class="boxContent">
+         <div class="resetBoxWrapper">
+         <h2>Select Character to Reborn</h2>
+         <br>
+         <select id="chaID">
+            {{#each chainfo}}
+            <option value="{{ChaNum}}">{{ChaName}}</option>
+            {{/each}}
+         </select>
+         <br><br><br>
+         <button id="doReborn">Reborn</button>
+         <br><br>
+         <h3>Reborn Requirement</h3>
+         <br>
+         <div class="codeblockz"><pre><p>{{#each required}}STAGE {{addOne @index}}: Gold: {{format gold}} LEVEL: {{chaLevel}} RB:{{maxRb}} REWARD: {{reward}}</p>{{/each}}</pre></div>
+      </div>
+   </div>
+</div>
+</script>
+
+<script id="goldtovp-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> COVERT GOLD TO COMBAT POINT </p>
+   </div>
+   <div class="boxContent">
+      <div class="resetBoxWrapper">
+         <h2>Please Select Character</h2>
+         <br>
+         <select class="convertChaEvent" id="chaID">
+               <option>SELECT CHARACTER</option>
+             {{#each chainfo}}
+                <option data-number="{{ChaMoney}}" data-rate="{{getValue 'gold' ../rate}}" value="{{ChaNum}}">{{ChaName}}</option>
+             {{/each}}
+         </select>
+         <br><br>
+         <div class="subwrapper">
+            
+         </div>
+      </div>
+   </div>
+</div>
+</script>
+<script id="goldtovphelp-wrapper" type="text/x-handlebars-template">
+   <p>Character Gold : <span id="chaGold">{{gold}}</span></p>
+   <p><br>Enter Gold Amount: <input style="width:100px" id="goldACC" type="text"> = <span id="gtRes">0</span> VP<br><br>Exchange Rate : {{rate}} Gold = 1 VP </p>
+   <div id="btnPlace"></div>
+
+</script>
+<script id="voting-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Voting Link </p>
+   </div>
+   <div class="boxContent">
+      <div class="linkWrapper">
+         <h2>Please Select Link to vote</h2>
+         <br>
+         <select id="linkActive">
+            {{#each link}}
+               <option data-linkads="{{url}}" value="{{id}}">{{functionName}}</option>
+            {{/each}}
+         </select>
+         <br><br>
+         <button id="voteAction">Vote Server</button>
+      </div>
+   </div>
+</div>
+</script>
+
+<script id="voteshop-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> CP Store </p>
+   </div>
+   <div class="shopController">
+      <select id="categorySelect" data-seekmode="2">
+         <option>Select Category</option>
+         {{#each ctg}}
+         <option value="{{id}}">{{CategoryName}}</option>
+         {{/each}}
+      </select> 
+      <input id="searchSTR" type="text"> 
+      <button id="searchItem" data-mode="2">Search</button>
+   </div>
+   <div class="boxContent shop">
+      <ul class="storeItem">
+         {{#if shop}}
+         {{#each shop}}
+         <li>
+            <div class="productWrapper">
+               <div class="img">
+                  <div class="itemICO lfloat">
+                     <img id="modalWindow" data-itemnamez="Ramel" data-imgsrc="null" src="./images/store/{{checkpicture ItemIco}}" width="80" height="80" alt="item">
+                  </div>
+                  <div class="itemInformation lfloat">
+                     <div class="itemNameInfo">
+                        <p>{{ItemName}}</p>
+                     </div>
+                     <span>{{ItemDisc}}</span>
+                  </div>
+                  <div class="itemPriceSection lfloat">
+                     <div class="itemPricePrint">
+                        <p>{{ItemPrice}} CP</p>
+                     </div>
+                     <button data-item="{{ProductNum}}" data-mode="2" data-price="{{ItemPrice}}" id="buyItem">BUY NOW</button>
+                  </div>
+               </div>
+            </div>
+         </li>
+         {{/each}}
+         {{else}}
+            <li>
+            <div class="productWrapper">
+               <h3>No Product Available</h3>
+            </div>
+         </li>
+         {{/if}}
+      </ul>
+   </div>
+</div>
+</script>
+
+<script id="premiumshop-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> EP Store </p>
+   </div>
+   <div class="shopController">
+      <select id="categorySelect" data-seekmode="1">
+         <option>Select Category</option>
+         {{#each ctg}}
+         <option value="{{id}}">{{CategoryName}}</option>
+         {{/each}}
+      </select> 
+      <input id="searchSTR" type="text"> 
+      <button id="searchItem" data-mode="1">Search</button>
+   </div>
+   <div class="boxContent shop">
+      <ul class="storeItem">
+         {{#if shop}}
+         {{#each shop}}
+         <li>
+            <div class="productWrapper">
+               <div class="img">
+                  <div class="itemICO lfloat">
+                     <img id="modalWindow" data-itemnamez="Ramel" data-imgsrc="null" src="./images/store/{{checkpicture ItemIco}}" width="80" height="80" alt="item">
+                  </div>
+                  <div class="itemInformation lfloat">
+                     <div class="itemNameInfo">
+                        <p>{{ItemName}}</p>
+                     </div>
+                     <span>{{ItemDisc}}</span>
+                  </div>
+                  <div class="itemPriceSection lfloat">
+                     <div class="itemPricePrint">
+                        <p>{{ItemPrice}} EP</p>
+                     </div>
+                     <button data-item="{{ProductNum}}" data-mode="1" data-price="{{ItemPrice}}" id="buyItem">BUY NOW</button>
+                  </div>
+               </div>
+            </div>
+         </li>
+         {{/each}}
+         {{else}}
+            <li>
+            <div class="productWrapper">
+               <h3>No Product Available</h3>
+            </div>
+         </li>
+         {{/if}}
+      </ul>
+   </div>
+</div>
+</script>
+<script id="topup-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Top Up Point </p>
+   </div>
+   <div class="boxContent">
+      <br>
+      <p>Please type the code correctly:</p>
+      <br>
+      <table>
+         <tbody>
+            <tr>
+               <td>Serial Number:</td>
+               <td><input id="topUpCardSN" type="text"></td>
+            </tr>
+            <tr>
+               <td>Pin Number:</td>
+               <td><input id="topUpCardPIN" type="text"></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><button id="topUpCard">Top-Up</button></td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+</script>
+
+<script id="accuserdata-wrapper" type="text/x-handlebars-template">
+{{#data}}
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> General Account Settings </p>
+   </div>
+   <div class="boxContent">
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>Name </p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p>{{name}}</p>
+         </div>
+         <div class="lfloat"></div>
+      </div>
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>Username </p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p>{{id}}</p>
+         </div>
+         <div class="lfloat"></div>
+      </div>
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>Email </p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p>{{email}}</p>
+         </div>
+         <div class="lfloat">
+            <button id="verifyMe">Verify Now</button>
+         </div>
+      </div>
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>Date Registered </p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p>{{date}}</p>
+         </div>
+         <div class="lfloat"></div>
+      </div>
+      <div class="accInfoWrapper">
+         <div id="ui_PassForm">
+            <div class="LinfoSection lfloat">
+               <p>Password </p>
+            </div>
+            <div class="LinfoSection2 lfloat">
+               <p>*********</p>
+            </div>
+            <div class="lfloat">
+               <span id="uiToggleEvent" data-uitype="chPass" class="miniToggle_btn">Edit Password</span>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+         <div id="ui_chPassFormManager" class="changePassWrapper" style="display:none">
+            <div class="LinfoSection lfloat">Password</div>
+            <div class="LinfoSection2 lfloat">
+               <p>Current</p>
+               <form id="chPassSave" method="post">
+                  <input id="chpass1" type="password" required="">
+                  <br><br>
+                  <p>New</p><input id="chpass2" type="password" required="">
+                  <br><br>
+                  <p>Re-type new</p><input id="chpass3" type="password" required="">
+                  <br><br>
+                  <p>Enter Pincode</p><input id="chpass4" type="password" required="">
+                  <br><br>
+                  <button id="chPassSave">Save</button> 
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="accInfoWrapper">
+         <div id="ui_PassForm">
+            <div class="LinfoSection lfloat">
+               <p>Pincode </p>
+            </div>
+            <div class="LinfoSection2 lfloat">
+               <p>*********</p>
+            </div>
+            <div class="lfloat">
+               <span id="uiToggleEvent" data-uitype="chPin" class="miniToggle_btn">Edit Pincode</span>
+            </div>
+         </div>
+         <div class="clearfix"> </div>
+         <div id="ui_chPinFormManager" class="changePassWrapper" style="display:none">
+            <div class="LinfoSection lfloat">Pincode</div>
+            <div class="LinfoSection2 lfloat">
+               <p>Current</p>
+               <form id="chPinSave" method="post">
+                  <input id="chpin1" type="password" required="">
+                  <br><br>
+                  <p>New</p><input id="chpin2" type="password" required="">
+                  <br><br>
+                  <p>Re-type new</p><input id="chpin3" type="password" required="">
+                  <br><br>
+                  <button>Save</button> 
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>GameTime</p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p>{{../h}} Hour and {{../m}} Minutes</p>
+         </div>
+         <div class="lfloat">{{{chkRewards ../h}}}</div>
+      </div>
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>My Character</p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p>{{Character}}</p>
+         </div>
+         <div class="lfloat">
+            <span id="viewChaInfo">View</span>
+         </div>
+      </div>
+      <div class="accInfoWrapper">
+         <div class="LinfoSection lfloat">
+            <p>Account Status</p>
+         </div>
+         <div class="LinfoSection2 lfloat">
+            <p class="Disconnected">{{{chkStatus status}}}</p>
+         </div>
+         <div class="lfloat"></div>
+      </div>
+   </div>
+</div>
+{{/data}}
+</script>
+
+<script id="mycharacter-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> My Character </p>
+   </div>
+   <div class="boxContent">
+      <table>
+         <tbody>
+            <tr>
+               <td>Character Name</td>
+               <td>Gold</td>
+               <td>Level</td>
+               <td>Kill</td>
+               <td>Death</td>
+               <td>Status</td>
+            </tr>
+         </tbody>
+         <tbody>
+         {{#each this}}
+            <tr>
+               <td>{{addOne @key}}. {{ChaName}}</td>
+               <td>{{ChaMoney}}</td>
+               <td>{{ChaLevel}}</td>
+               <td>{{ChaPkWin}}</td>
+               <td>{{ChaPkLoss}}</td>
+               <td>Offline</td>
+            </tr>
+            {{/each}}
+         </tbody>
+      </table>
+   </div>
+</div>
+</script>
+<script id="mynotification-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p>Notification</p>
+   </div>
+   <div class="boxContent">
+      <ul id="notificationWrapper">
+         {{#each this}}
+         <li class="unseen">
+            <h3 class="lfloat">System</h3>
+            <h3 id="notiX" class="rfloat notiClose">X</h3>
+            <div class="clearfix"></div>
+            <div>{{{context}}}</div>
+         </li>
+         {{/each}}
+      </ul>
+   </div>
+   </div>
+</script>
+<script id="accrecover2-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Account Verification System </p>
+   </div>
+   <div class="boxContent">
+      <form id="recoverFormVerify" method="post">
+         <br>
+         <h3>SECURITY QUESTION :</h3>
+         <br>
+         <p>{{ask}}</p>
+         <br><br>
+         Please Enter Answer : <input type="text" id="rec_answer" required="">
+         <br><br>
+         Please Enter Pincode: <input type="password" id="rec_answer_pin" required="">
+         <br><br> 
+         <button>Recover</button>
+      </form>
+   </div>
+</div>
+</script>
+<script id="recoveryDisplay-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Account Verification System </p>
+   </div>
+   <div class="boxContent">
+      <br>
+      <h3>Your Account has been successfully recovered</h3>
+      <br>
+      <div class="codeblockz">
+         <pre> Your new password is: {{newpass}}</pre>
+      </div>
+   </div>
+</div>
+</script>
+<script id="viewGenpoint-wrapper" type="text/x-handlebars-template">
+<div class="boxWrapper">
+   <div class="titleHeader">
+      <p> Available Point </p>
+   </div>
+   <div class="boxContent">
+      <br>
+      <table class="table" border="1">
+         <tbody>
+            <tr>
+               <td>&nbsp; Serial</td>
+               <td>&nbsp; Pin</td>
+               <td>&nbsp; Amount</td>
+               <td>&nbsp; Type</td>
+            </tr>
+            {{#each this}}
+            <tr>
+               <td>&nbsp; {{serial}}</td>
+               <td>&nbsp; {{pin}}</td>
+               <td>&nbsp; {{amount}}</td>
+               <td>&nbsp; {{checkPointType type}}</td>
+            {{/each}}
+            </tr>
+         </tbody>
+      </table>
+      <br><br>
+      <button id="generateView">Refresh</button>
+   </div>
+</div>
+</script>
+<script id="createnewsform-wrapper" type="text/x-handlebars-template">
+<tr>
+   <td>News Type:</td>
+   <td>
+      <select id='newsType'>
+         <option value='0'>CHOOSE</option>
+         <option value='1'>EVENT</option>
+         <option value='2'>NEWS</option>
+         <option value='3'>SYSTEM</option>
+      </select>
+   </td>
+</tr>
+<tr>
+   <td>News Subject:</td>
+   <td><input type='text' id='newsSubject' style='width:300px'></td>
+</tr>
+<tr>
+   <td>News Content:</td>
+   <td>
+      <textarea name='area1' id='newsBodyContent' style='min-height:200px; width: 470px;'></textarea>
+   </td>
+</tr>
+<tr>
+   <td></td>
+   <td><button id='saveCreatedNews'>Save</button></td>
+</tr>
+</script>
+<script id="editnewsform-wrapper" type="text/x-handlebars-template">
+<tr>
+   <td>News Type:</td>
+   <td>
+      <select id='newsType2'>
+         <option value='1' {{select_opt 1 type}}>EVENT</option>
+         <option value='2' {{select_opt 2 type}}>NEWS</option>
+         <option value='3' {{select_opt 3 type}}>SYSTEM</option>
+      </select>
+   </td>
+</tr>
+<tr>
+   <td>News Subject:</td>
+   <td><input type='text' id='newsSubject2' style='width:300px' value="{{subject}}"></td>
+</tr>
+<tr>
+   <td>News Content:</td>
+   <td>
+      <textarea name='area1' id='newsBodyContents' style='min-height:200px; width: 470px;'>{{{body}}}</textarea>
+   </td>
+</tr>
+<tr>
+   <td></td>
+   <td><button data-newsnum="{{id}}" id='saveEditedNews'>Update</button></td>
+</tr>
+</script>
+
+<script id="createlink-wrapper" type="text/x-handlebars-template">
+<form method='post'><tr><td>Link Type:</td><td><select id='linkTypeCreate'required='required'><option value='0'>CHOOSE</option><option value='1'>FULL CLIENT</option><option value='2'>PATCH</option></select></td></tr><tr><td>Link Name:</td><td><input id='linkNameCreate' type='text' style='width:300px' required/></td></tr><tr><td>Link Address:</td><td><input id='linkAddressCreate' type='text' style='width:300px' required/></td></tr><tr><td></td><td><button  id='SaveLink'>SAVE</button></td></tr></form>
+</script>
+<script id="finishReg-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p> Registration Success </p>
+   </div>
+   <div class='boxContent'>
+      <h3>Thank you for registering with {{server}}</h3>
+      <br>
+      <p>Your account has been created:</p>
+      <br>
+      <div class="codeblockz"><pre><p>Username: {{username}}</p><p>Email: {{email}}</p><p>Password: {{password}}</p><p>Pincode : {{pincode}}</p></pre></div>
+      <br><br>
+      <h5>Having trouble accessing your account? Please contact Online Customer Support.</h5>
+      <a href="#cmd/user/login">
+         <p style="color:red;font-size:12px;margin-top:10px;">Login In Now?</p>
+      </a>
+   </div>
+</div>
+</script>
+<script id="userwall-wrapper" type="text/x-handlebars-template">
+<div class='boxWrapper'>
+   <div class='titleHeader'>
+      <p>GAMERS WALL</p>
+   </div>
+   <div class='boxContent'>
+      <h3> Thank you for playing {{name}}</h3>
+   </div>
+</div>
+</script>
+<script id="storeItemView-wrapper" type="text/x-handlebars-template">
+<tr>
+   <td>#</td><td>MID</td><td>SID</td><td>Name</td><td>Type</td><td>Price</td><td></td>
+</tr>
+   {{#each this}}
+   <tr>
+      <td>{{addOne @key}}</td>
+      <td>{{ItemMain}}</td>
+      <td>{{ItemSub}}</td>
+      <td>{{ItemName}}</td>
+      <td>{{checkPointType ItemSec}}</td>
+      <td>{{ItemPrice}}</td>
+      <td><button id="deleteItemAct" data-productnum="{{ProductNum}}" style="background:red"> DELETE</button> <button id="modifyItz" data-productnum="{{ProductNum}}" style="background:blue"> EDIT</button></td>
+   </tr>
+   {{/each}}
+</script>
+<script id="createItemView-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td>Category</td>
+      <td>
+         <select id="itemCategory">
+            <option value="0">Choose</option>
+            {{#each this}}
+            <option value="{{id}}">{{CategoryName}}</option>
+            {{/each}}
+         </select>
+      </td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>Value</td>
+      <td>
+         <select id="itemCurrency">
+            <option value="0">Choose</option>
+            <option value="2">CP Item</option>
+            <option value="1">EP Item</option>
+         </select>
+      </td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>SN_MID_SID</td>
+      <td colspan="2">
+         <input type="text" id="itemMid" placeholder="Mid">
+         <input type="text" id="itemSid" placeholder="Sid">
+      </td>
+   </tr>
+   <tr>
+      <td>Item Name</td>
+      <td>
+         <input type="text" id="ItemName">
+      </td>
+   </tr>
+   <tr>
+      <td>Item Price</td>
+      <td>
+         <input type="text" id="ItemPrice">
+      </td>
+      </tr>
+      <tr>
+         <td>Image FileName</td>
+         <td><input type="text" value="null" id="ItemImage"> <br><i>note: You must upload the image manually</i></td>
+      </tr>
+      <tr>
+         <td>Item Discription</td>
+         <td><textarea id="ItemDisc" style="width:252px;height:100px"></textarea></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td><button id="addNewItem">Upload</button></td>
+      </tr>
+</script>
+
+<script id="editItemView-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td>Category</td>
+      <td>
+         <select id="itemCategory">
+            {{#each ctg}}
+            <option value="{{id}}" {{selected id ../item}}>{{CategoryName}}</option>
+            {{/each}}
+         </select>
+      </td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>{{#item}}
+      <td>Value</td>
+      <td>
+         <select id="itemCurrency">
+            <option value="2" {{select_opt 2 ItemSec}}>CP Item</option>
+            <option value="1" {{select_opt 1 ItemSec}}>EP Item</option>
+         </select>
+      </td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>SN_MID_SID</td>
+      <td colspan="2">
+         <input type="text" id="itemMid" placeholder="Mid" value="{{ItemMain}}">
+         <input type="text" id="itemSid" placeholder="Sid" value="{{ItemSub}}">
+      </td>
+   </tr>
+   <tr>
+      <td>Item Name</td>
+      <td>
+         <input type="text" id="ItemName" value="{{ItemName}}">
+      </td>
+   </tr>
+   <tr>
+      <td>Item Price</td>
+      <td>
+         <input type="text" id="ItemPrice" value="{{ItemPrice}}">
+      </td>
+      </tr>
+      <tr>
+         <td>Image FileName</td>
+         <td><input type="text" value="{{ItemIco}}" id="ItemImage"> <br><i>note: You must upload the image manually</i></td>
+      </tr>
+      <tr>
+         <td>Item Discription</td>
+         <td><textarea id="ItemDisc" style="width:252px;height:100px">{{ItemDisc}}</textarea></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td><button data-productnum="{{ProductNum}}" id="updateItem">Update</button></td>
+      </tr>
+      {{/item}}
+</script>
+
+<script id="webconfigReset-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Reset Stats Requirement</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>GOLD: <input id="gold_ws" value="{{gold}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>VP &nbsp; &nbsp; &nbsp;: <input id="ep_ws" value="{{ep}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>EP &nbsp; &nbsp; &nbsp;: <input id="vp_ws" value="{{vp}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfig">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigChangeSc-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Change School Requirement</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>GOLD: <input id="gold_ws" value="{{gold}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>EP &nbsp; &nbsp; &nbsp;: <input id="ep_ws" value="{{ep}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>CP &nbsp; &nbsp; &nbsp;: <input id="vp_ws" value="{{vp}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigCs">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigRb-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Character Reborn Requirement</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><h3>Reborn Stagess</td>
+   </tr>
+   <tr>
+      <td>S1 <input </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigRb">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigStage-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>RB {{functionName}} Configuration</h3></td>
+   </tr>
+   <tr>
+      <td>GOLD: <input id="stagegold_ws" value="{{gold}}" type="text"></td>
+   
+   </tr>
+   <tr>
+      <td>LEVEL: <input id="stagelevel_ws" value="{{chaLevel}}" type="text"></td>
+   
+   </tr>
+   <tr>
+      <td>MAX RB: <input id="stagemaxrb_ws" value="{{maxRb}}" type="text"></td>
+   
+   </tr>
+   <tr>
+      <td>REWARD: <input id="stagereward_ws" value="{{reward}}" type="text"></td>
+   </tr>
+   
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigRbStage">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigGtoVp-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Gold to Vp Configuration</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>GOLD RATE: <input id="vrate_ws" value="{{gold}}" type="text"> = 1 VP</td> 
+   
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigGtV">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigVote-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Vote Configuration</h3></td>
+   </tr>
+   {{#config}}
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td colspan="2">REWARD: <input id="vrate_ws" value="{{reward}}" type="text"> / 12 Hours</td> 
+   
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+  
+   <tr>
+   <tr>
+      <td></td>
+   </tr>
+   <tr>
+      <td><h3>Vote URL List</h3></td>
+   </tr>
+    {{#each ../url}}
+   <tr id="edit{{id}}">
+      <td>{{functionName}} </td><td>{{url}}</td><td colspan="2"><button style='width:50px;background:red' id="removeThisLink" data-delid="{{id}}">DEL</button></td>
+   </tr>
+   {{/each}}
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigVotelink">UPDATE</button> <button id="addNewVoteLink">ADD LINK</button></td>
+   </tr>
+    {{/config}}
+</script>
+<script id="webconfigVPStore-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>CP Store Config</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigVPStore">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigEPStore-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Premium Store Config</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigEPStore">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigRecharge-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Top up config</h3></td>
+   </tr>
+   <tr>
+      <td>NAME: <input id="functioNamez" value="{{functionName}}" type="text"></td>
+   </tr>
+   <tr>
+      <td>FN &nbsp; &nbsp; &nbsp;: 
+         <select id="status_ws">
+            <option value="1" {{select_opt 1 status}}>ENABLED</option>
+            <option value="0" {{select_opt 0 status}}>DISABLED</option>
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigRecharge">UPDATE</button></td>
+   </tr>
+</script>
+<script id="webconfigGameTime-wrapper" type="text/x-handlebars-template">
+   <tr>
+      <td><h3>Game Time config</h3></td>
+   </tr>
+   <tr>
+      <td>REWARD PER HOUR: <input id="rewards_wws" value="{{reward}}" type="text"></td>
+   </tr>
+   
+   <tr>
+      <td><button data-configid="{{id}}" id="saveWebConfigGametime">UPDATE</button></td>
+   </tr>
+</script>
+
+
+
